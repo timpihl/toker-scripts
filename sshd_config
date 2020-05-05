@@ -1,0 +1,31 @@
+################
+#              #
+#      SSH     #
+#              #
+################
+
+Port 22
+
+ListenAddress 0.0.0.0
+
+PermitRootLogin yes
+
+MaxSessions 2
+
+PubkeyAuthentication yes
+
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+
+ChallengeResponseAuthentication no
+
+UsePAM yes
+
+X11Forwarding yes
+
+PrintMotd no
+
+TCPKeepAlive yes
+
+AcceptEnv LANG LC_*
+
+Subsystem       sftp    /usr/lib/openssh/sftp-server
