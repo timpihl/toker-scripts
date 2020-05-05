@@ -1,0 +1,26 @@
+#!/bin/bash
+
+cd /
+
+alias dc="docker-compose"
+alias dcu="docker-compose up -d"
+alias dcd="docker-compose down"
+alias dcdrr="docker-compose down --remove-orphans --rmi all"
+
+alias docker-up=". /toker/scripts/docker-up.sh"
+
+alias os-update="sh /toker/scripts/os-update.sh"
+alias os-upgrade="upgrade-system"
+
+alias redc="dcd;dcu"
+alias redcl="dcd;dcu;dc logs -f"
+alias dcps=". /toker/scripts/dc-ps.sh"
+
+alias os-update5="os-update;os-update;os-update;os-update;os-update"
+alias os-updatex="os-update5;os-update5;os-update5;os-update5;os-update5"
+
+alias dc-update="dcdrr && dcu"
+
+echo "
+Server has been $(uptime -p)
+"
