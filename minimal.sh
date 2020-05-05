@@ -1,3 +1,4 @@
+#!/bin/bash
 DEBIAN_FRONTEND=noninteractive apt-get remove --purge -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \
 apache2* \
 bind9* \
